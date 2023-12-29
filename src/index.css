@@ -1,13 +1,90 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #252525;
+}
+.btn,
+a,
+svg {
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+}
+input:focus {
+  outline: none;
+}
+.btn {
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 2.5px 15px;
+  border: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  color: #252525;
+}
+
+/* NAVIGATION */
+::placeholder {
+  opacity: 0.7;
+}
+/* CARD */
+#card .reviews svg {
+  color: #d5ab55;
+}
+/* RECOMMENDED */
+#recmd .btn {
+  margin-right: 1rem;
+  margin-top: 2rem;
+  background-color: #252525;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+/* "Category" */
+#price-and-category-and-color .label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+  margin-top: 2px;
+  margin-left: 1.5px;
+}
+#price-and-category-and-color .label .checkmark {
+  background-color: #eee;
+}
+#price-and-category-and-color .label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+#price-and-category-and-color .label input:checked ~ .checkmark {
+  background-color: #2dc5eb;
+}
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+#price-and-category-and-color .label input:checked ~ .checkmark::after {
+  display: block;
+}
+
+#price-and-category-and-color .label .checkmark::after {
+  top: 5px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.color-all {
+  background: linear-gradient(blue, crimson);
 }

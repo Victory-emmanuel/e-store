@@ -55,7 +55,7 @@ const Card = ({
               component="span"
               sx={{ fontWeight: "500", paddingRight: "0.5rem" }}
             >
-              Cost:
+              Price:
             </Typography>
             <Typography variant="span" component="del">
               {prevPrice}

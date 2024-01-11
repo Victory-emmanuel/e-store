@@ -5,7 +5,7 @@ import { Input, InputAll } from "./components";
 const Price = ({ handleRadioClick }) => {
   return (
     <>
-      <Box id="price-and-category-and-color">
+      <Box sx={{}} id="price-and-category-and-color">
         <Typography
           mb={"1.5rem"}
           variant="h6"

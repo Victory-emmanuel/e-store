@@ -69,8 +69,18 @@ function App() {
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: "15% 83%",
+
+          gridTemplateColumns: {
+            xs: "100%",
+            sm: "100%",
+            md: "18% 78%",
+            lg: "18% 78%",
+          },
           gridGap: "2%",
+          margin: {
+            xs: "0 1.5rem",
+            sm: "0 1rem",
+          },
         }}
         className="App"
       >

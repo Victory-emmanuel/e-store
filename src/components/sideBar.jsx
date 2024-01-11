@@ -36,7 +36,7 @@ const SideBar = ({ handleRadioClick }) => {
           }}
         >
           <Typography variant="h4" component="span" sx={{ fontWeight: "300" }}>
-            E-Store 2.0
+            E-Store
           </Typography>
         </Box>
         <Box

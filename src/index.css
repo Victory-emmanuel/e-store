@@ -42,11 +42,9 @@ a {
 /* RECOMMENDED */
 #recmd .btn {
   margin-right: 1rem;
-  margin-top: 2rem;
   background-color: #252525;
   color: #fff;
   padding: 5px 10px;
-  border: none;
   border-radius: 5px;
 }
 /* "Category" */

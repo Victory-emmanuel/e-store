@@ -1,14 +1,18 @@
 import { Box, Typography } from "@mui/material";
 import { Category, Colors, Price } from "./components";
+import { ShoppingCartOutlined } from "@mui/icons-material";
 
 const SideBar = ({ handleRadioClick }) => {
   return (
     <>
       <Box
-        p={4}
         sx={{
           borderRight: "1px solid #ddd",
-          display: "grid",
+          display: {
+            xs: "none",
+            sm: "none",
+            md: "grid",
+          },
           justifySelf: "left",
           height: "100vh",
           backgroundColor: "#fff",
@@ -16,15 +20,35 @@ const SideBar = ({ handleRadioClick }) => {
           position: "sticky",
           left: 0,
           top: 0,
+          padding: {
+            md: "2rem 0.5rem",
+            lg: "2rem",
+          },
         }}
       >
-        <Box sx={{ marginBottom: "3.5rem" }}>
-          <Typography variant="h3" component="span" sx={{ fontWeight: "600" }}>
-            E-
+        <Box
+          sx={{
+            display: {
+              md: "none",
+              lg: "block",
+            },
+            marginBottom: "3.5rem",
+          }}
+        >
+          <Typography variant="h4" component="span" sx={{ fontWeight: "300" }}>
+            E-Store 2.0
           </Typography>
-          <Typography variant="h3" component="span" sx={{ fontWeight: "100" }}>
-            Store
-          </Typography>
+        </Box>
+        <Box
+          sx={{
+            display: {
+              md: "block",
+              lg: "none",
+            },
+            marginBottom: "3.5rem",
+          }}
+        >
+          <ShoppingCartOutlined sx={{ fontSize: "4rem" }} />
         </Box>
         <Category handleRadioClick={handleRadioClick} />
         <Price handleRadioClick={handleRadioClick} />
